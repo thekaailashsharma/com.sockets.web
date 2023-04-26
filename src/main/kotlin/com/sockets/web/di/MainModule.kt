@@ -12,7 +12,7 @@ import org.litote.kmongo.reactivestreams.KMongo
 
 val module = module {
     single {
-        KMongo.createClient().coroutine.getDatabase("TryChatting")
+        KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
     }
     single<DataSource> {
         MessageDataSourceImpl(get())

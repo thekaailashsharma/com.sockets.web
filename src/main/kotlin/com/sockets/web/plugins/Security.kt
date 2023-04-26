@@ -54,7 +54,7 @@ fun Application.configureSecurity() {
 
 
 suspend fun fromValidation(from: String): Boolean {
-    val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+    val db = KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
     val list = db.getCollection<UserInfo>("chatApp").find().toList()
     list.forEach {
         if (it.userName == from) return true
@@ -64,7 +64,7 @@ suspend fun fromValidation(from: String): Boolean {
 }
 
 suspend fun toValidation(to: String): Boolean {
-    val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+    val db = KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
     val list = db.getCollection<UserInfo>("chatApp").find().toList()
     list.forEach {
         if (it.userName == to) return true

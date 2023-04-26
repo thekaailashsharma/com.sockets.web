@@ -32,7 +32,7 @@ fun Routing.infoRoutes(roomController: P2PController) {
             )
             return@get
         }
-        val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+        val db = KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
         val k = db.getCollection<UserInfo>("chatApp").find().toList()
         call.respond(status = HttpStatusCode.OK, message = k)
 
@@ -41,7 +41,7 @@ fun Routing.infoRoutes(roomController: P2PController) {
         val username = call.parameters["username"]
         var path: String? = null
         if (username != null) {
-            val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+            val db = KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
             val k = db.getCollection<UserInfo>("chatApp").find().toList()
             for (i in k) {
                 if (i.userName == username) {
@@ -76,7 +76,7 @@ fun Routing.infoRoutes(roomController: P2PController) {
     }
     put("/users") {
         val multipart = call.receiveMultipart()
-        val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+        val db = KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
         val collection = db.getCollection<UserInfo>("chatApp")
         var username = ""
         var email = ""
