@@ -23,6 +23,9 @@ fun Application.configureRouting() {
 
 
     routing {
+        get("/") {
+            call.respond("Hello")
+        }
         chatRoutes(roomController = roomController)
         getMessages(roomController = roomController)
         infoRoutes(roomController = p2pController)
