@@ -18,3 +18,7 @@ fun Application.module() {
     configureSerialization()
     configureRouting()
 }
+
+sealed class MongoDB(val value: String){
+    object url: MongoDB("mongodb://mongo:fpk4FwbSnprEMAFvyKif@containers-us-west-109.railway.app:6235")
+}

@@ -1,11 +1,10 @@
 package com.sockets.web.plugins
 
+import com.sockets.web.MongoDB
 import com.sockets.web.data.UserInfo
 import com.sockets.web.sessions.ChatSession
 import com.sockets.web.sessions.P2PSession
-import io.ktor.http.*
 import io.ktor.server.application.*
-import io.ktor.server.response.*
 import io.ktor.server.sessions.*
 import io.ktor.util.*
 import org.litote.kmongo.coroutine.coroutine
@@ -54,7 +53,7 @@ fun Application.configureSecurity() {
 
 
 suspend fun fromValidation(from: String): Boolean {
-    val db = KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
+    val db = KMongo.createClient(MongoDB.url.value).coroutine.getDatabase("TryChatting")
     val list = db.getCollection<UserInfo>("chatApp").find().toList()
     list.forEach {
         if (it.userName == from) return true
@@ -64,7 +63,7 @@ suspend fun fromValidation(from: String): Boolean {
 }
 
 suspend fun toValidation(to: String): Boolean {
-    val db = KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
+    val db = KMongo.createClient(MongoDB.url.value).coroutine.getDatabase("TryChatting")
     val list = db.getCollection<UserInfo>("chatApp").find().toList()
     list.forEach {
         if (it.userName == to) return true

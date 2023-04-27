@@ -1,5 +1,6 @@
 package com.sockets.web.di
 
+import com.sockets.web.MongoDB
 import com.sockets.web.data.DataSource
 import com.sockets.web.data.MessageDataSourceImpl
 import com.sockets.web.data.P2PDataSource
@@ -12,7 +13,7 @@ import org.litote.kmongo.reactivestreams.KMongo
 
 val module = module {
     single {
-        KMongo.createClient("mongodb://mongo:kNEUZz4G1UO3sbdp5NhC@containers-us-west-35.railway.app:5660").coroutine.getDatabase("TryChatting")
+        KMongo.createClient(MongoDB.url.value).coroutine.getDatabase("TryChatting")
     }
     single<DataSource> {
         MessageDataSourceImpl(get())
