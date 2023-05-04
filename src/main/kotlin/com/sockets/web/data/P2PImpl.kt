@@ -24,8 +24,9 @@ class P2PImpl(
         ).descendingSort(P2PMessage::timeStamp).toList()
     }
 
-    override suspend fun getLocationMessage(): List<LocationMessage> {
-       return locationCollection.find().toList()
+    override suspend fun getLocationMessage(from: String?): List<LocationMessage>? {
+
+       return locationCollection.find("{from:$from}").toList()
     }
 
     override suspend fun insertMessages(message: P2PMessage) {

@@ -91,8 +91,8 @@ class P2PController(
         return dataSource.getAllMessages(from, to)
     }
 
-    suspend fun getLocationMessage(): List<LocationMessage>? {
-        return dataSource.getLocationMessage()
+    suspend fun getLocationMessage(from: String?): List<LocationMessage>? {
+        return dataSource.getLocationMessage(from = from)
     }
 
     suspend fun disconnect(username: String) {

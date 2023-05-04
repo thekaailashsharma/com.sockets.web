@@ -45,8 +45,8 @@ class RoomController(
             member.socket.send(Frame.Text(parsedMessage))
         }
     }
-    suspend fun getAllMessages(): List<Message> {
-        return dataSource.getAllMessages()
+    suspend fun getAllMessages(from: String?): List<Message> {
+        return dataSource.getAllMessages(from = from)
     }
 
     suspend fun disconnect(username: String){

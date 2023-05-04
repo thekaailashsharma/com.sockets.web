@@ -8,8 +8,8 @@ class MessageDataSourceImpl(
 
     private val databaseCollection = db.getCollection<Message>("chatApp")
 
-    override suspend fun getAllMessages(): List<Message> {
-        return databaseCollection.find()
+    override suspend fun getAllMessages(from: String?): List<Message> {
+        return databaseCollection.find("{from:$from}")
             .descendingSort(Message::timeStamp)
             .toList()
     }

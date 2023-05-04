@@ -47,6 +47,7 @@ fun Routing.chatRoutes(roomController: RoomController) {
 
 fun Routing.getMessages(roomController: RoomController) {
     get("/Messages1") {
-        call.respond(HttpStatusCode.OK, roomController.getAllMessages())
+        val from = call.parameters["from"]
+        call.respond(HttpStatusCode.OK, roomController.getAllMessages(from = from))
     }
 }
