@@ -2,6 +2,7 @@ package com.sockets.web.routes
 
 import com.sockets.web.MongoDB
 import com.sockets.web.data.Failure
+import com.sockets.web.data.Stories
 import com.sockets.web.data.Success
 import com.sockets.web.data.UserInfo
 import com.sockets.web.roomController.P2PController
@@ -18,6 +19,7 @@ import io.ktor.server.websocket.*
 import io.ktor.websocket.*
 import kotlinx.coroutines.channels.consumeEach
 import org.litote.kmongo.coroutine.coroutine
+import org.litote.kmongo.eq
 import org.litote.kmongo.reactivestreams.KMongo
 import java.io.File
 
@@ -38,11 +40,140 @@ fun Routing.infoRoutes(roomController: P2PController) {
         call.respond(status = HttpStatusCode.OK, message = k)
 
     }
+
+    get("/storyImage") {
+        val username = call.parameters["username"]
+        var path: String? = null
+        if (username != null) {
+            val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+            val k = db.getCollection<Stories>("Stories").find().toList()
+            for (i in k) {
+                if (i.userName == username) {
+                    path = i.image
+                }
+            }
+            if (path != null) {
+                val file = File(path)
+                call.response.header(
+                    HttpHeaders.ContentDisposition, ContentDisposition.Inline.withParameter(
+                        ContentDisposition.Parameters.FileName, "image.jpg"
+                    ).toString()
+                )
+                call.respondFile(file)
+            } else {
+                call.respond(
+                    Failure(
+                        result = "Username Invalid"
+                    )
+                )
+            }
+
+        } else {
+            call.respond(
+                Failure(
+                    result = "Please Enter a Username"
+                )
+            )
+        }
+    }
+    get("allStories") {
+        val username = call.parameters["username"]
+        if (username == null) {
+            call.respond(HttpStatusCode.BadRequest, "Username Missing")
+        }
+        val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+        val k = db.getCollection<Stories>("Stories").find()
+            .descendingSort(Stories::storyUpdated)
+            .toList()
+        call.respond(status = HttpStatusCode.OK, message = k)
+    }
+    get("/story") {
+        val username = call.parameters["username"]
+        if (username == null) {
+            call.respond(HttpStatusCode.BadRequest, "Username Missing")
+        }
+        val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+        val k = db.getCollection<Stories>("Stories").find(
+            filters = arrayOf(
+                Stories::userName eq username
+            )
+        ).toList()
+        call.respond(status = HttpStatusCode.OK, message = k)
+    }
+
+    post("/stories") {
+        val multipart = call.receiveMultipart()
+        val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
+        val collection = db.getCollection<Stories>("Stories")
+        var path: String? = null
+        var username: String? = null
+        var storyUpdated: String? = null
+        var caption: String? = null
+        var canUpdate = false
+        multipart.forEachPart { part ->
+            if (part is PartData.FileItem) {
+                when (part.name?.lowercase()) {
+                    "image" -> {
+                        path =
+                            "src/main/resources/profiles/${getRandomString()}.${part.originalFileName?.substringAfter(".")}"
+                        val file = path?.let { it1 -> File(it1) }
+                        part.streamProvider().use { inputStream ->
+                            file?.outputStream()?.buffered().use {
+                                if (it != null) {
+                                    inputStream.copyTo(it)
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            if (part is PartData.FormItem) {
+                println("Part Name is ${part.name}")
+                when (part.name?.lowercase()) {
+                    "username" -> {
+                        username = part.value
+                    }
+
+                    "timestamp" -> {
+                        storyUpdated = part.value
+                    }
+
+                    "caption" -> {
+                        caption = part.value
+                    }
+                }
+            }
+        }
+        println("Username = $username && story = $storyUpdated && caption = $caption")
+        if (username != null && storyUpdated != null) {
+            try {
+                val longTime = storyUpdated?.toLong() ?: 0L
+                        collection.insertOne(
+                            Stories(
+                                userName = username,
+                                storyUpdated = longTime,
+                                storyOver = add24HoursToMillis(longTime),
+                                caption = caption,
+                                image = path
+                            )
+                        )
+                        call.respond(HttpStatusCode.OK, "Story Updated Successfully")
+
+            } catch (e: Exception) {
+                call.respond(HttpStatusCode.BadRequest, e.message.toString())
+            }
+        } else {
+            call.respond(HttpStatusCode.BadRequest, "Some Parameter is Missing")
+        }
+
+    }
     get("/profile") {
         val username = call.parameters["username"]
         var path: String? = null
         if (username != null) {
-            val db = KMongo.createClient(MongoDB.url.value).coroutine.getDatabase("TryChatting")
+            val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
             val k = db.getCollection<UserInfo>("chatApp").find().toList()
             for (i in k) {
                 if (i.userName == username) {
@@ -77,7 +208,7 @@ fun Routing.infoRoutes(roomController: P2PController) {
     }
     put("/users") {
         val multipart = call.receiveMultipart()
-        val db = KMongo.createClient(MongoDB.url.value).coroutine.getDatabase("TryChatting")
+        val db = KMongo.createClient().coroutine.getDatabase("TryChatting")
         val collection = db.getCollection<UserInfo>("chatApp")
         var username = ""
         var email = ""
@@ -191,9 +322,15 @@ fun Routing.infoRoutes(roomController: P2PController) {
     }
 }
 
+fun add24HoursToMillis(currentTimeInMillis: Long): Long {
+    val oneDayInMillis = 24 * 60 * 60 * 1000L // 24 hours in milliseconds
+    return currentTimeInMillis + oneDayInMillis
+}
+
+
 fun Routing.getP2PMessages(roomController: P2PController) {
     get("/Messages") {
-        val get = roomController.getLocationMessage() ?: emptyList()
+        val get = roomController.getLocationMessage("") ?: emptyList()
         call.respond(HttpStatusCode.OK, get)
     }
 }
