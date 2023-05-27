@@ -11,22 +11,37 @@ import org.koin.dsl.module
 import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.reactivestreams.KMongo
 
+/**
+ * Koin module for dependency injection configuration.
+ */
 val module = module {
+    /**
+     * Provides a single instance of the CoroutineDatabase representing the MongoDB client.
+     */
     single {
         KMongo.createClient(MongoDB.url.value).coroutine.getDatabase("TryChatting")
     }
+    /**
+     * Provides a single instance of the [DataSource] implementation, [MessageDataSourceImpl].
+     */
     single<DataSource> {
         MessageDataSourceImpl(get())
     }
-
+    /**
+     * Provides a single instance of the [P2PDataSource] implementation, [P2PImpl].
+     */
     single<P2PDataSource> {
         P2PImpl(get())
     }
-
+    /**
+     * Provides a single instance of the [RoomController].
+     */
     single {
         RoomController(get())
     }
-
+    /**
+     * Provides a single instance of the [P2PController].
+     */
     single {
         P2PController(get())
     }

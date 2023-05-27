@@ -9,6 +9,10 @@ import io.ktor.server.response.*
 import io.ktor.server.request.*
 import io.ktor.server.routing.*
 
+
+/**
+ * Configures WebSocket settings for the application.
+ */
 fun Application.configureSockets() {
     install(WebSockets) {
         pingPeriod = Duration.ofSeconds(15)

@@ -24,6 +24,11 @@ import org.litote.kmongo.reactivestreams.KMongo
 import java.io.File
 
 
+/**
+ * Defines routes for handling user information.
+ *
+ * @param roomController The room controller for handling P2P operations.
+ */
 fun Routing.infoRoutes(roomController: P2PController) {
     get("/users") {
         val from = call.parameters["from"]
@@ -322,12 +327,22 @@ fun Routing.infoRoutes(roomController: P2PController) {
     }
 }
 
+/**
+ * Defines routes for handling user information.
+ *
+ * @param currentTimeInMillis Takes Current Time in milliseconds and adds 24 hours to it
+ */
 fun add24HoursToMillis(currentTimeInMillis: Long): Long {
     val oneDayInMillis = 24 * 60 * 60 * 1000L // 24 hours in milliseconds
     return currentTimeInMillis + oneDayInMillis
 }
 
 
+/**
+ * Defines routes for handling user information.
+ *
+ * @param roomController The room controller for handling P2P operations.
+ */
 fun Routing.getP2PMessages(roomController: P2PController) {
     get("/Messages") {
         val get = roomController.getLocationMessage("") ?: emptyList()

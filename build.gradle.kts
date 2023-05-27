@@ -1,12 +1,28 @@
+import org.jetbrains.dokka.base.DokkaBase
+import org.jetbrains.dokka.base.DokkaBaseConfiguration
+import org.jetbrains.dokka.gradle.DokkaTask
+
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
 val koin_ktor: String by project
 
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.dokka:dokka-base:1.8.10")
+    }
+}
+
 plugins {
     kotlin("jvm") version "1.8.0"
     id("io.ktor.plugin") version "2.2.2"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
+    id("org.jetbrains.dokka") version "1.8.10"
+}
+tasks.withType<DokkaTask>().configureEach {
+    pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+        footerMessage = "(c) 2023 @thekaailashsharma"
+    }
 }
 
 group = "com.sockets.web"

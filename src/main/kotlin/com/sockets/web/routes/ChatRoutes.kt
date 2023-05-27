@@ -11,6 +11,11 @@ import io.ktor.server.websocket.*
 import io.ktor.websocket.*
 import kotlinx.coroutines.channels.consumeEach
 
+/**
+ * Defines WebSocket chat routes.
+ *
+ * @param roomController The room controller for handling chat operations.
+ */
 fun Routing.chatRoutes(roomController: RoomController) {
     webSocket("/chat") {
         val session = call.sessions.get<ChatSession>()
@@ -45,6 +50,11 @@ fun Routing.chatRoutes(roomController: RoomController) {
     }
 }
 
+/**
+ * Defines the route for retrieving chat messages.
+ *
+ * @param roomController The room controller for handling chat operations.
+ */
 fun Routing.getMessages(roomController: RoomController) {
     get("/Messages1") {
         val from = call.parameters["from"]
