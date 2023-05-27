@@ -1,17 +1,6 @@
----
-title: relation
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[applinksItem](index.html)/[relation](relation.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[applinksItem](index.md)/[relation](relation.md)
 
 # relation
 
-
-
 [jvm]\
-val [relation](relation.html): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)&lt;[String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?&gt;?
-
-
-
-
+val [relation](relation.md): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)&lt;[String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?&gt;?

@@ -1,25 +1,13 @@
----
-title: sendMessage
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.roomController](../index.html)/[P2PController](index.html)/[sendMessage](send-message.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.roomController](../index.md)/[P2PController](index.md)/[sendMessage](send-message.md)
 
 # sendMessage
 
-
-
 [jvm]\
-suspend fun [sendMessage](send-message.html)(fromUserName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), toUserName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), message: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = &quot;&quot;, latitude: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? = null, longitude: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? = null)
-
-
+suspend fun [sendMessage](send-message.md)(fromUserName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), toUserName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), message: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = &quot;&quot;, latitude: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? = null, longitude: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? = null)
 
 Sends a message to the specified P2P member(s).
 
-
-
 #### Parameters
-
 
 jvm
 
@@ -30,7 +18,3 @@ jvm
 | message | The text message to send. |
 | latitude | The latitude of the location (optional). |
 | longitude | The longitude of the location (optional). |
-
-
-
-

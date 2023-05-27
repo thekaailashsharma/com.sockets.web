@@ -1,28 +1,14 @@
----
-title: data
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Success](index.html)/[data](data.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Success](index.md)/[data](data.md)
 
 # data
 
-
-
 [jvm]\
-val [data](data.html): [UserInfo](../-user-info/index.html)
-
-
+val [data](data.md): [UserInfo](../-user-info/index.md)
 
 #### Parameters
-
 
 jvm
 
 | | |
 |---|---|
 | data | additional user information. |
-
-
-
-

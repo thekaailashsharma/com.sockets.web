@@ -1,21 +1,11 @@
----
-title: Stories
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Stories](index.html)/[Stories](-stories.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Stories](index.md)/[Stories](-stories.md)
 
 # Stories
-
-
 
 [jvm]\
 constructor(userName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?, storyUpdated: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)?, storyOver: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)?, caption: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?, image: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?)
 
-
-
 #### Parameters
-
 
 jvm
 
@@ -26,7 +16,3 @@ jvm
 | storyOver | the timestamp when the story expires. |
 | caption | the caption of the story. |
 | image | the image URL of the story. |
-
-
-
-

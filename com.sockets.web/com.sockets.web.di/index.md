@@ -1,18 +1,9 @@
----
-title: com.sockets.web.di
----
-//[com.sockets.web](../../index.html)/[com.sockets.web.di](index.html)
-
-
+//[com.sockets.web](../../index.md)/[com.sockets.web.di](index.md)
 
 # Package-level declarations
 
-
-
 ## Properties
-
 
 | Name | Summary |
 |---|---|
-| [module](module.html) | [jvm]<br>val [module](module.html): Module<br>Koin module for dependency injection configuration. |
-
+| [module](module.md) | [jvm]<br>val [module](module.md): Module<br>Koin module for dependency injection configuration. |

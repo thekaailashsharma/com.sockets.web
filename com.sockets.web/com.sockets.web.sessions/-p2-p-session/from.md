@@ -1,17 +1,6 @@
----
-title: from
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.sessions](../index.html)/[P2PSession](index.html)/[from](from.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.sessions](../index.md)/[P2PSession](index.md)/[from](from.md)
 
 # from
 
-
-
 [jvm]\
-val [from](from.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
-
-
-
-
+val [from](from.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)

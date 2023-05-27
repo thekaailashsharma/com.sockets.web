@@ -1,32 +1,16 @@
----
-title: insertLocation
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[P2PImpl](index.html)/[insertLocation](insert-location.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[P2PImpl](index.md)/[insertLocation](insert-location.md)
 
 # insertLocation
 
-
-
 [jvm]\
-open suspend override fun [insertLocation](insert-location.html)(location: [LocationMessage](../-location-message/index.html))
-
-
+open suspend override fun [insertLocation](insert-location.md)(location: [LocationMessage](../-location-message/index.md))
 
 Inserts a new location message into the data source.
 
-
-
 #### Parameters
-
 
 jvm
 
 | | |
 |---|---|
 | location | the location message to insert. |
-
-
-
-

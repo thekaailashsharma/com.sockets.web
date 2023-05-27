@@ -1,28 +1,14 @@
----
-title: email
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[UserInfo](index.html)/[email](email.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[UserInfo](index.md)/[email](email.md)
 
 # email
 
-
-
 [jvm]\
-val [email](email.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
-
-
+val [email](email.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
 
 #### Parameters
-
 
 jvm
 
 | | |
 |---|---|
 | email | the email address of the user. |
-
-
-
-

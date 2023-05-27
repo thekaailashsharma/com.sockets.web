@@ -1,21 +1,8 @@
----
-title: configureMonitoring
----
-//[com.sockets.web](../../index.html)/[com.sockets.web.plugins](index.html)/[configureMonitoring](configure-monitoring.html)
-
-
+//[com.sockets.web](../../index.md)/[com.sockets.web.plugins](index.md)/[configureMonitoring](configure-monitoring.md)
 
 # configureMonitoring
 
-
-
 [jvm]\
-fun Application.[configureMonitoring](configure-monitoring.html)()
-
-
+fun Application.[configureMonitoring](configure-monitoring.md)()
 
 Configures monitoring and call logging for the application.
-
-
-
-

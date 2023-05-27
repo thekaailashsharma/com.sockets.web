@@ -1,21 +1,8 @@
----
-title: module
----
-//[com.sockets.web](../../index.html)/[com.sockets.web.di](index.html)/[module](module.html)
-
-
+//[com.sockets.web](../../index.md)/[com.sockets.web.di](index.md)/[module](module.md)
 
 # module
 
-
-
 [jvm]\
-val [module](module.html): Module
-
-
+val [module](module.md): Module
 
 Koin module for dependency injection configuration.
-
-
-
-

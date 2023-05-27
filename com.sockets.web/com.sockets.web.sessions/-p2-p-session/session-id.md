@@ -1,17 +1,6 @@
----
-title: sessionId
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.sessions](../index.html)/[P2PSession](index.html)/[sessionId](session-id.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.sessions](../index.md)/[P2PSession](index.md)/[sessionId](session-id.md)
 
 # sessionId
 
-
-
 [jvm]\
-val [sessionId](session-id.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
-
-
-
-
+val [sessionId](session-id.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)

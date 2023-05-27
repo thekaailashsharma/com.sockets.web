@@ -1,28 +1,14 @@
----
-title: userName
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Message](index.html)/[userName](user-name.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Message](index.md)/[userName](user-name.md)
 
 # userName
 
-
-
 [jvm]\
-val [userName](user-name.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
-
-
+val [userName](user-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
 
 #### Parameters
-
 
 jvm
 
 | | |
 |---|---|
 | userName | the username of the message sender. |
-
-
-
-

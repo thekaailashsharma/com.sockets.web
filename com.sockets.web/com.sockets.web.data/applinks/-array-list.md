@@ -1,17 +1,6 @@
----
-title: ArrayList
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[applinks](index.html)/[ArrayList](-array-list.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[applinks](index.md)/[ArrayList](-array-list.md)
 
 # ArrayList
 
-
-
 [jvm]\
-val [ArrayList](-array-list.html): [applinksItem](../applinks-item/index.html)
-
-
-
-
+val [ArrayList](-array-list.md): [applinksItem](../applinks-item/index.md)

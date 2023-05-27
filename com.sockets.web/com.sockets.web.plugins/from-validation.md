@@ -1,17 +1,6 @@
----
-title: fromValidation
----
-//[com.sockets.web](../../index.html)/[com.sockets.web.plugins](index.html)/[fromValidation](from-validation.html)
-
-
+//[com.sockets.web](../../index.md)/[com.sockets.web.plugins](index.md)/[fromValidation](from-validation.md)
 
 # fromValidation
 
-
-
 [jvm]\
-suspend fun [fromValidation](from-validation.html)(from: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
-
-
-
-
+suspend fun [fromValidation](from-validation.md)(from: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)

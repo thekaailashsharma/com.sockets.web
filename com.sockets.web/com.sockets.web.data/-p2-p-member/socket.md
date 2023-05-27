@@ -1,17 +1,6 @@
----
-title: socket
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[P2PMember](index.html)/[socket](socket.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[P2PMember](index.md)/[socket](socket.md)
 
 # socket
 
-
-
 [jvm]\
-val [socket](socket.html): WebSocketSession
-
-
-
-
+val [socket](socket.md): WebSocketSession

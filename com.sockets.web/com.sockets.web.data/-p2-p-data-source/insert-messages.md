@@ -1,32 +1,16 @@
----
-title: insertMessages
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[P2PDataSource](index.html)/[insertMessages](insert-messages.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[P2PDataSource](index.md)/[insertMessages](insert-messages.md)
 
 # insertMessages
 
-
-
 [jvm]\
-abstract suspend fun [insertMessages](insert-messages.html)(message: [P2PMessage](../-p2-p-message/index.html))
-
-
+abstract suspend fun [insertMessages](insert-messages.md)(message: [P2PMessage](../-p2-p-message/index.md))
 
 Inserts a new P2P message into the data source.
 
-
-
 #### Parameters
-
 
 jvm
 
 | | |
 |---|---|
 | message | the P2P message to insert. |
-
-
-
-
