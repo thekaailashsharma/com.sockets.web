@@ -4,7 +4,7 @@ Web Sockets with Ktor
 Build with Power of Coroutines 😇 
 
 ## Get Official Documentation here
-[Click here]((https://ktorwebsockets.netlify.app/)
+[Click here](https://ktorwebsockets.netlify.app/)
 
 
 ## Packages
