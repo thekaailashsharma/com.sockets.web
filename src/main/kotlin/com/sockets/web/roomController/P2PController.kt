@@ -7,12 +7,26 @@ import kotlinx.serialization.json.Json
 import java.util.concurrent.ConcurrentHashMap
 
 
+/**
+ * Controller for handling P2P (peer-to-peer) messaging and operations.
+ *
+ * @property dataSource The data source for P2P messages and location messages.
+ * @property members A concurrent hash map to store the active P2P members.
+ */
 class P2PController(
     private val dataSource: P2PDataSource
 ) {
     private val members = ConcurrentHashMap<String, P2PMember>()
-    private val location = ConcurrentHashMap<String, LocationMember>()
 
+    /**
+     * Handles the join event of a P2P member.
+     *
+     * @param from The username of the member initiating the join.
+     * @param to The username of the member the join is directed to.
+     * @param sessionId The session ID of the WebSocket connection.
+     * @param socket The WebSocket session.
+     * @throws Exception if a member with the same username already exists.
+     */
     fun onJoin(
         from: String?,
         to: String?,
@@ -30,22 +44,15 @@ class P2PController(
         )
     }
 
-//    suspend fun sendLocation(
-//        latitude: String?,
-//        longitude: String?
-//    ) {
-//        location.values.forEach { locationMember ->
-//            val locationEntity = LocationMessage(
-//                latitude = latitude,
-//                longitude = longitude
-//            )
-//            dataSource.insertLocation(locationEntity)
-//            val parsedMessage = Json.encodeToString(location)
-//            locationMember.socket.send(Frame.Text(parsedMessage))
-//
-//        }
-//    }
-
+    /**
+     * Sends a message to the specified P2P member(s).
+     *
+     * @param fromUserName The username of the sender.
+     * @param toUserName The username of the recipient.
+     * @param message The text message to send.
+     * @param latitude The latitude of the location (optional).
+     * @param longitude The longitude of the location (optional).
+     */
     suspend fun sendMessage(
         fromUserName: String,
         toUserName: String,
@@ -82,19 +89,21 @@ class P2PController(
         }
     }
 
-    suspend fun sendNotify(){
-
-    }
-
-
-    suspend fun getAllMessages(from: String?, to: String?): List<P2PMessage>? {
-        return dataSource.getAllMessages(from, to)
-    }
-
+    /**
+     * Retrieves location messages for the specified user.
+     *
+     * @param from The username of the user.
+     * @return A list of location messages.
+     */
     suspend fun getLocationMessage(from: String?): List<LocationMessage>? {
         return dataSource.getLocationMessage(from = from)
     }
 
+    /**
+     * Disconnects a member by closing its WebSocket session.
+     *
+     * @param username The username of the member to disconnect.
+     */
     suspend fun disconnect(username: String) {
         members[username]?.socket?.close()
         if (members.containsKey(username)) {
