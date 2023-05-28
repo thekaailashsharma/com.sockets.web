@@ -1,17 +1,6 @@
----
-title: packageName
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Target](index.html)/[packageName](package-name.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Target](index.md)/[packageName](package-name.md)
 
 # packageName
 
-
-
 [jvm]\
-val [packageName](package-name.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?
-
-
-
-
+val [packageName](package-name.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?

@@ -1,17 +1,6 @@
----
-title: target
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[applinksItem](index.html)/[target](target.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[applinksItem](index.md)/[target](target.md)
 
 # target
 
-
-
 [jvm]\
-val [target](target.html): [Target](../-target/index.html)?
-
-
-
-
+val [target](target.md): [Target](../-target/index.md)?

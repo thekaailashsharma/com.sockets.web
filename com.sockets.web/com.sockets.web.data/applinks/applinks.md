@@ -1,17 +1,6 @@
----
-title: applinks
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[applinks](index.html)/[applinks](applinks.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[applinks](index.md)/[applinks](applinks.md)
 
 # applinks
 
-
-
 [jvm]\
-constructor(ArrayList: [applinksItem](../applinks-item/index.html))
-
-
-
-
+constructor(ArrayList: [applinksItem](../applinks-item/index.md))

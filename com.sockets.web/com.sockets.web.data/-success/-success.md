@@ -1,21 +1,11 @@
----
-title: Success
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Success](index.html)/[Success](-success.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Success](index.md)/[Success](-success.md)
 
 # Success
 
-
-
 [jvm]\
-constructor(result: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), data: [UserInfo](../-user-info/index.html))
-
-
+constructor(result: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), data: [UserInfo](../-user-info/index.md))
 
 #### Parameters
-
 
 jvm
 
@@ -23,7 +13,3 @@ jvm
 |---|---|
 | result | the result status of the response. |
 | data | additional user information. |
-
-
-
-

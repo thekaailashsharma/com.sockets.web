@@ -1,17 +1,6 @@
----
-title: sendNotify
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.roomController](../index.html)/[P2PController](index.html)/[sendNotify](send-notify.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.roomController](../index.md)/[P2PController](index.md)/[sendNotify](send-notify.md)
 
 # sendNotify
 
-
-
 [jvm]\
-suspend fun [sendNotify](send-notify.html)()
-
-
-
-
+suspend fun [sendNotify](send-notify.md)()

@@ -1,20 +1,12 @@
----
-title: P2PImpl
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[P2PImpl](index.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[P2PImpl](index.md)
 
 # P2PImpl
 
-class [P2PImpl](index.html)(db: CoroutineDatabase) : [P2PDataSource](../-p2-p-data-source/index.html)
+class [P2PImpl](index.md)(db: CoroutineDatabase) : [P2PDataSource](../-p2-p-data-source/index.md)
 
-Implementation of the [P2PDataSource](../-p2-p-data-source/index.html) interface for handling peer-to-peer messages and location information.
-
-
+Implementation of the [P2PDataSource](../-p2-p-data-source/index.md) interface for handling peer-to-peer messages and location information.
 
 #### Parameters
-
 
 jvm
 
@@ -22,23 +14,17 @@ jvm
 |---|---|
 | db | the CoroutineDatabase instance representing the database. |
 
-
-
 ## Constructors
-
 
 | | |
 |---|---|
-| [P2PImpl](-p2-p-impl.html) | [jvm]<br>constructor(db: CoroutineDatabase) |
-
+| [P2PImpl](-p2-p-impl.md) | [jvm]<br>constructor(db: CoroutineDatabase) |
 
 ## Functions
 
-
 | Name | Summary |
 |---|---|
-| [getAllMessages](get-all-messages.html) | [jvm]<br>open suspend override fun [getAllMessages](get-all-messages.html)(from: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?, to: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)&lt;[P2PMessage](../-p2-p-message/index.html)&gt;<br>Retrieves all P2P messages from the data source. |
-| [getLocationMessage](get-location-message.html) | [jvm]<br>open suspend override fun [getLocationMessage](get-location-message.html)(from: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)&lt;[LocationMessage](../-location-message/index.html)&gt;?<br>Retrieves all location messages from the data source. |
-| [insertLocation](insert-location.html) | [jvm]<br>open suspend override fun [insertLocation](insert-location.html)(location: [LocationMessage](../-location-message/index.html))<br>Inserts a new location message into the data source. |
-| [insertMessages](insert-messages.html) | [jvm]<br>open suspend override fun [insertMessages](insert-messages.html)(message: [P2PMessage](../-p2-p-message/index.html))<br>Inserts a new P2P message into the data source. |
-
+| [getAllMessages](get-all-messages.md) | [jvm]<br>open suspend override fun [getAllMessages](get-all-messages.md)(from: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?, to: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)&lt;[P2PMessage](../-p2-p-message/index.md)&gt;<br>Retrieves all P2P messages from the data source. |
+| [getLocationMessage](get-location-message.md) | [jvm]<br>open suspend override fun [getLocationMessage](get-location-message.md)(from: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)&lt;[LocationMessage](../-location-message/index.md)&gt;?<br>Retrieves all location messages from the data source. |
+| [insertLocation](insert-location.md) | [jvm]<br>open suspend override fun [insertLocation](insert-location.md)(location: [LocationMessage](../-location-message/index.md))<br>Inserts a new location message into the data source. |
+| [insertMessages](insert-messages.md) | [jvm]<br>open suspend override fun [insertMessages](insert-messages.md)(message: [P2PMessage](../-p2-p-message/index.md))<br>Inserts a new P2P message into the data source. |

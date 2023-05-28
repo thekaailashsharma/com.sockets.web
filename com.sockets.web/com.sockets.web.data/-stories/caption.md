@@ -1,28 +1,14 @@
----
-title: caption
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Stories](index.html)/[caption](caption.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Stories](index.md)/[caption](caption.md)
 
 # caption
 
-
-
 [jvm]\
-val [caption](caption.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?
-
-
+val [caption](caption.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?
 
 #### Parameters
-
 
 jvm
 
 | | |
 |---|---|
 | caption | the caption of the story. |
-
-
-
-

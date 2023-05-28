@@ -1,28 +1,14 @@
----
-title: id
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[P2PMessage](index.html)/[id](id.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[P2PMessage](index.md)/[id](id.md)
 
 # id
 
-
-
 [jvm]\
-val [id](id.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
-
-
+val [id](id.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
 
 #### Parameters
-
 
 jvm
 
 | | |
 |---|---|
 | id | the unique identifier of the message. |
-
-
-
-

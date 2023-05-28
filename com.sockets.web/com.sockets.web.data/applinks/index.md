@@ -1,31 +1,18 @@
----
-title: applinks
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[applinks](index.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[applinks](index.md)
 
 # applinks
 
-
-
 [jvm]\
-data class [applinks](index.html)(val ArrayList: [applinksItem](../applinks-item/index.html))
-
-
+data class [applinks](index.md)(val ArrayList: [applinksItem](../applinks-item/index.md))
 
 ## Constructors
 
-
 | | |
 |---|---|
-| [applinks](applinks.html) | [jvm]<br>constructor(ArrayList: [applinksItem](../applinks-item/index.html)) |
-
+| [applinks](applinks.md) | [jvm]<br>constructor(ArrayList: [applinksItem](../applinks-item/index.md)) |
 
 ## Properties
 
-
 | Name | Summary |
 |---|---|
-| [ArrayList](-array-list.html) | [jvm]<br>val [ArrayList](-array-list.html): [applinksItem](../applinks-item/index.html) |
-
+| [ArrayList](-array-list.md) | [jvm]<br>val [ArrayList](-array-list.md): [applinksItem](../applinks-item/index.md) |

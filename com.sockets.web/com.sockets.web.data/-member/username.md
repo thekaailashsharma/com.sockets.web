@@ -1,17 +1,6 @@
----
-title: username
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Member](index.html)/[username](username.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Member](index.md)/[username](username.md)
 
 # username
 
-
-
 [jvm]\
-val [username](username.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
-
-
-
-
+val [username](username.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)

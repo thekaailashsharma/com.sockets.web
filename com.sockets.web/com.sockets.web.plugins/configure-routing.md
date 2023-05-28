@@ -1,21 +1,8 @@
----
-title: configureRouting
----
-//[com.sockets.web](../../index.html)/[com.sockets.web.plugins](index.html)/[configureRouting](configure-routing.html)
-
-
+//[com.sockets.web](../../index.md)/[com.sockets.web.plugins](index.md)/[configureRouting](configure-routing.md)
 
 # configureRouting
 
-
-
 [jvm]\
-fun Application.[configureRouting](configure-routing.html)()
-
-
+fun Application.[configureRouting](configure-routing.md)()
 
 Configures the routing for the application.
-
-
-
-

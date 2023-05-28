@@ -1,17 +1,6 @@
----
-title: RoomController
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.roomController](../index.html)/[RoomController](index.html)/[RoomController](-room-controller.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.roomController](../index.md)/[RoomController](index.md)/[RoomController](-room-controller.md)
 
 # RoomController
 
-
-
 [jvm]\
-constructor(dataSource: [DataSource](../../com.sockets.web.data/-data-source/index.html))
-
-
-
-
+constructor(dataSource: [DataSource](../../com.sockets.web.data/-data-source/index.md))

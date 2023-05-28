@@ -1,17 +1,6 @@
----
-title: namespace
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Target](index.html)/[namespace](namespace.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Target](index.md)/[namespace](namespace.md)
 
 # namespace
 
-
-
 [jvm]\
-val [namespace](namespace.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?
-
-
-
-
+val [namespace](namespace.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?

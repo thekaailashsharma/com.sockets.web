@@ -1,17 +1,6 @@
----
-title: latitude
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.sessions](../index.html)/[P2PSession](index.html)/[latitude](latitude.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.sessions](../index.md)/[P2PSession](index.md)/[latitude](latitude.md)
 
 # latitude
 
-
-
 [jvm]\
-val [latitude](latitude.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?
-
-
-
-
+val [latitude](latitude.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?

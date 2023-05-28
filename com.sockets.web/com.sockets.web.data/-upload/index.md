@@ -1,28 +1,14 @@
----
-title: Upload
----
-//[com.sockets.web](../../../index.html)/[com.sockets.web.data](../index.html)/[Upload](index.html)
-
-
+//[com.sockets.web](../../../index.md)/[com.sockets.web.data](../index.md)/[Upload](index.md)
 
 # Upload
 
-
-
-
-
 @Serializable
 
-
-
-data class [Upload](index.html)(val result: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), val uniqueId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?)
+data class [Upload](index.md)(val result: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), val uniqueId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?)
 
 Represents an upload response.
 
-
-
 #### Parameters
-
 
 jvm
 
@@ -31,21 +17,15 @@ jvm
 | result | the result status of the response. |
 | uniqueId | the unique identifier of the uploaded content. |
 
-
-
 ## Constructors
-
 
 | | |
 |---|---|
-| [Upload](-upload.html) | [jvm]<br>constructor(result: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), uniqueId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?) |
-
+| [Upload](-upload.md) | [jvm]<br>constructor(result: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), uniqueId: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?) |
 
 ## Properties
 
-
 | Name | Summary |
 |---|---|
-| [result](result.html) | [jvm]<br>val [result](result.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [uniqueId](unique-id.html) | [jvm]<br>val [uniqueId](unique-id.html): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? |
-
+| [result](result.md) | [jvm]<br>val [result](result.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [uniqueId](unique-id.md) | [jvm]<br>val [uniqueId](unique-id.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? |
